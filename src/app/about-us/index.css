@@ -1,0 +1,552 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.notif-badge {
+  transition: transform 0.3s ease-in-out;
+}
+
+.notif-badge:hover {
+  transform: scale(1.2);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.animation-blink {
+  animation: blink 1s step-start infinite;
+}
+
+.customH {
+  height: 500px;
+}
+
+.customNav {
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 100%;
+}
+
+.nav-link {
+  color: #ffffff;
+}
+
+.custom-text-animation {
+  font-size: 60px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.sub-text-css {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.61);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.custom-button {
+  padding: 10px 32px;
+  border-radius: 33px;
+  border: 1.5px solid #41479B;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.custom-button-icon {
+  padding: 4px 4px 4px 36px;
+  border-radius: 60px;
+  border: 1.5px solid #41479B;
+  background-color: #41479B;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.btn-icon-css {
+  padding: 14px;
+  margin-left: 25px;
+}
+
+.card-icon-rounded {
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border: 2px solid #41479B
+}
+
+.card-title {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 18px;
+  line-height: 32px;
+  min-height: 135px;
+}
+
+.bottom-hr {
+  background-color: black !important;
+  width: 100px;
+  height: 2.5px;
+  margin: 15px 0px;
+}
+
+.card-custom-shadow {
+  border: 1px solid #EEEEEE
+}
+
+.company-overview {
+  height: calc(100vh);
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 70px;
+  background-color: white;
+}
+
+.experience-card {
+  background-color: #41479B;
+  min-height: 200px;
+  color: white;
+  margin-top: -125px;
+  z-index: 1;
+  padding: 40px 50px;
+  width: 50%;
+}
+
+.experience-text {
+  font-size: 24px;
+  color: white;
+}
+
+.top-title {
+  font-size: 40px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.founded-text {
+  font-size: 20px;
+  line-height: 30px;
+  padding: 0px 0px 0px 20px;
+}
+
+@keyframes smoothShakeY {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.shake {
+  display: inline-block;
+  animation: smoothShakeY 2s infinite ease-in-out;
+}
+
+.custom-bg-pink {
+  background-color: #f3e1e6;
+  /* Light pink color */
+}
+
+.custom-bg-yellow {
+  background: #FFFCE7;
+
+}
+
+.custom-bg-blue {
+  background: #EDF5FC;
+}
+
+.custom-border-green {
+  border: 1px solid #92f3bc;
+  /* Custom blue color */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-text {
+  z-index: 2;
+  width: 50%;
+}
+
+/* Ensure "Who we are" is in a single line */
+.custom-text-animation {
+  font-size: 3rem;
+  white-space: nowrap;
+  /* Prevents text from wrapping */
+}
+
+@media (max-width: 576px) {}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 576px) {
+  .hero-text {
+    width: 80%;
+    /* Allow better text fitting */
+  }
+
+  .custom-text-animation {
+    font-size: 2rem;
+    /* Smaller text */
+    white-space: normal;
+    /* Allow wrapping if necessary */
+  }
+
+}
+/* Navbar Styling */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 10;
+}
+/* -------------MY CSS STYING----------------------------- */
+.wo-title {
+  font-size: 48px;
+}
+.wo-quote-span-text {
+  color: #41479B;
+}
+.wo-quote-text {
+  color: #000000;
+}
+.wo-about-main {
+  background-color: #EDF5FC;
+  padding: 30px;
+}
+.wo-about-title-text {
+  font-weight: 500;
+  opacity: 87%;
+}
+.wo-about-subtitle-text {
+  font-size: 20px;
+  opacity: 61%;
+}
+.wo-about-subtitle-span-text {
+  font-weight: 700;
+}
+.wo-coreValue-Opacity {
+  opacity: 87%;
+}
+.wo-ourmission-background {
+  background-color: #F5F5F5;
+  border-radius: 24px;
+}
+.wo-ceo-Opacity {
+  opacity: 61%;
+}
+.spacer {
+  display: block;
+  margin-top: 20px;
+}
+.wo-team-main{
+  padding: 130px 80px;
+  background-color: #F5F5F5;
+}
+.wo-team-card{
+  background-color: #FFFFFF;
+  width: 296px;
+  height: 454px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 10px 0px #0000000A;
+  box-shadow: 0px 20px 25px -5px #0000001A;
+}
+.wo-team-card-title{
+ color: #41479B;
+ font-size: 20px;
+ font-weight: 700;
+}
+.wo-team-card-subtitle{
+  color: #6B7280;
+  font-size: 16px;
+  white-space: normal;           
+  word-wrap: break-word;           
+  overflow: hidden;                
+  text-overflow: ellipsis;  
+}
+.wo-team-card-img{
+  width: 22px;
+  height: 22px;
+  margin-left: 20px;
+  object-fit: contain;
+  display: inline-block;  
+  overflow: hidden;            
+}
+.scroll-container{
+  display: flex;           
+  overflow-x: auto;         
+  white-space: nowrap;      
+  padding-bottom: 10px;  
+}
+/* Small (≥576px) */
+@media (max-width: 576px) {
+  .background-image {
+    width: 412px;
+  }
+  .wo-title-text {
+    font-size: 32px;
+    font-weight: 500;
+  }
+  .wo-paragraph-text {
+    font-size: 20px;
+    opacity: 60%;
+  }
+  .wo-quote-text {
+    font-size: 24px;
+  }
+  .wo-about-title-text {
+    font-size: 32px;
+  }
+  .wo-ourmission-title {
+    font-size: 32px;
+    font-weight: 500;
+    opacity: 87%;
+  }
+  .wo-ourmission-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 87%;
+  }
+  .wo-ourmission-background {
+    height: 600px;
+  }
+}
+/* Medium (≥768px) */
+@media (min-width: 768px) {
+  .background-image {
+    width: 843px;
+  }
+  .wo-title-text {
+    font-size: 36px;
+    font-weight: 500;
+    opacity: 87%;
+  }
+  .wo-paragraph-text {
+    font-size: 24px;
+    opacity: 61%;
+  }
+ .wo-quote-text {
+    font-size: 44px;
+  }
+  .wo-about-title-text {
+    font-size: 36px;
+  }
+  .wo-ourmission-title {
+    font-size: 36px;
+  }
+  .wo-ourmission-background {
+    height: 450px;
+  }
+  .wo-ceo-title {
+    font-size: 36px;
+    font-weight: 500;
+  }
+  .wo-ceo-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+/* Large (≥992px) */
+@media (min-width: 992px) {
+  .background-image {
+    width: 1440px;
+  }
+  .wo-about-title-text {
+    font-size: 40px;
+    width: 100%;
+  }
+  .wo-about-subtitle-text {
+    font-size: 24px;
+  }
+  .wo-about-main {
+    padding: 50px;
+  }
+  .core-values-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .core-values-container-image{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 30px 20px; */
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    margin: 30px 20px;
+  }
+  .our-mission-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0px auto;
+    justify-content: center;
+  }
+  .our-mission-card{
+    background-color: #F5F5F5;
+    padding: 30px 20px 20px 20px;
+    width: 50%;
+  }
+  .our-mission-card h2{
+    font-size: clamp(20px, 3vw + 1rem, 40px);
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 100%;
+  }
+  .our-mission-card p{
+    font-size: clamp(14px, 1vw + 0.25rem, 16px);
+    font-weight: 400;
+    color: #191919;
+    line-height: 150%;
+    margin-top: 20px;
+  }
+  .our-mission-card-margin{
+    padding-bottom: 250px;
+  }
+  .core-values-container-content{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px 0px 10px;
+    margin-top: 30px;
+  }
+  .company-vision-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+  }
+  .company-vision-image{
+    width: 83%;
+  }
+  .company-vision-second-image{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .company-vision-second-image-style{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .coreValue-imageone {
+    border-radius: 24px;
+  }
+  .wo-ourmission-background {
+    border-radius: 0;
+    width: 560px;
+    height: 480px;
+  }
+  
+  .wo-ceo-title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .wo-ceo-imagediv {
+    width: 40%;
+  }
+  .wo-ceo-textdiv {
+    width: 60%;
+  }
+  .wo-team-text{
+    padding: 10px 50px;
+  }
+}
+/* Extra Large (≥1200px) */
+@media (min-width: 1200px) {
+  .wo-about-title-text {
+    width: 30%;
+  }
+  .wo-ceo-main {
+    margin: 0px 200px;
+  }
+  .wo-ceo-imagediv {
+    width: 40%;
+  }
+  .wo-ceo-textdiv {
+    width: 60%;
+  }
+  .wo-team-text{
+    padding: 10px 150px;
+  }
+}

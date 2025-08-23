@@ -1,0 +1,57 @@
+/* CUSTOM SWIPER CSS  */
+.custom-prev,
+.custom-next {
+  font-size: 16px;
+  border-radius: 30px;
+  background-color: rgb(21, 45, 182);
+  color: #000000;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+.container {
+  position: relative;
+}
+.navigation {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  right: 50px;
+}
+.no-hover:hover {
+  background-color: #41479b !important;
+}
+.navigation-button {
+  background: "#41479b";
+  border: none;
+}
+/* CUSTOM SWIPER CSS  */
+
+/* INFINTE SLIDER  CSS */
+.slide-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  width: calc(250px * 14);
+}
+.slide {
+  min-height: 100px;
+  /* min-width: 250px; */
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    
+}
+/* .slider:hover .slide-track {
+    animation-play-state: paused;
+} */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+	
+/* INFINTE SLIDER  CSS */

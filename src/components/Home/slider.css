@@ -1,0 +1,29 @@
+/* CUSTOM SWIPER CSS  */
+.custom-prev-btn{
+  border-radius: 30px;
+  background-color: #41479b !important;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border: none;
+}
+.custom-next-btn{
+  border-radius: 30px;
+  background-color: #41479b !important;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border: none;
+  margin-left: 20px;
+}
+.navigation-button {
+  background: "#41479b";
+  border: none;
+}
+.custom-navigation-btn{
+  position: absolute;
+  right: 0px;
+  padding-right: 50px;
+
+}
+/* CUSTOM SWIPER CSS  */
