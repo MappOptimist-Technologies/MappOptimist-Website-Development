@@ -48,7 +48,7 @@ const Footer = () => {
         setStatus("✅ Subscribed successfully!");
         e.currentTarget.reset(); // clear input
       } 
-    } catch (err) {
+    } catch {
       setStatus("⚠️ Error connecting to server");
     }
   };

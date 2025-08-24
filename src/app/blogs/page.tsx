@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "@/components/header/navbar";
 import Footer from "@/components/Home/footer";
 import Link from "next/link";
+import Image from "next/image";
+
 
 const data = [
   {
@@ -71,8 +73,12 @@ export default function BlogsPage() {
                 <Link href={`/blogs/${item.slug}`}>
                   <div className="blog-card pe-auto">
                     <div className="card_image">
-                      <img src={item.icon} className='fit-image'
-                        alt={item?.title} />
+                    <Image
+                        src={item.icon}
+                        alt={item?.title || "icon"}
+                        fill
+                        className="fit-image object-contain"
+                      />
                     </div>
                     <div className="blog-card-content">
                       <h2 className="blog-card-title">{item.title}</h2>

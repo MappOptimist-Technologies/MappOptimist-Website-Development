@@ -102,12 +102,17 @@ export default function ContactUsPage() {
               <h3>Reach out to us with your unique development queries to bring your vision into reality with our development capabilities.</h3>
             </div>
             <div className='d-flex align-items-center justify-content-center contact-gif position-relative'>
-              <img src={contactUsGif.src} alt="contact us background image" />
+              
+              <Image src={contactUsGif.src} alt="contact us background image" />
               <div className='d-flex icon-wrapper'>
                 {icon.map((i) =>
                   <div key={i.text} className='contact-gif-overlay'>
-                    <img loading='lazy' src={i.image.src} alt={i?.name} className="contact-gif-overlay-icons"
-                    />
+                    <Image
+                        src={i.image.src}
+                        alt={i?.name || "icon"}
+                        className="contact-gif-overlay-icons"
+                        loading="lazy"   // optional, Next already lazy-loads by default
+                      />
                     <h3>{i.text}</h3>
                   </div>
                 )}
