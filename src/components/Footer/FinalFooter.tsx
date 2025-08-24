@@ -47,9 +47,7 @@ const Footer = () => {
       if (result.result === "success") {
         setStatus("✅ Subscribed successfully!");
         e.currentTarget.reset(); // clear input
-      } else {
-        setStatus("❌ Something went wrong!");
-      }
+      } 
     } catch (err) {
       setStatus("⚠️ Error connecting to server");
     }

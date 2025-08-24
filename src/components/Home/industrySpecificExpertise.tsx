@@ -1,5 +1,5 @@
 "use client"
-import { Pagination, Navigation, FreeMode, Mousewheel } from 'swiper/modules';
+import { Pagination, Navigation, FreeMode } from 'swiper/modules';
 import SwiperCore from 'swiper';
 import Image from 'next/image';
 import 'swiper/css';
@@ -140,7 +140,7 @@ function IndustrySpecificExpertiseComponent() {
           className="swiper swiper-container"
           modules={[Navigation, Pagination, FreeMode]}
           slidesPerView={3}
-          mousewheel={true}
+          // mousewheel={true}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 10 },
