@@ -1,3 +1,16 @@
+// src/app/industries/[industry]/page.tsx
+
+export async function generateStaticParams() {
+  const industriesRoutes = [
+    "retail-e-commerce","healthcare","finance-banking","logistics-transportation",
+    "fashion-apparel","agriculture","education","technology-startups",
+    "qsr-fb","tax-legal","government-public-sector","business-process-automation",
+    "ai-in-construction-real-estate"
+  ];
+
+  return industriesRoutes.map(industry => ({ industry }));
+}
+
 import React from 'react';
 import Navbar from '@/components/header/navbar';
 import Image from "next/image";
