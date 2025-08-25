@@ -26,7 +26,6 @@ jobs:
         run: |
           echo "Building Next.js project..."
           npm run build
-          npx next export
           echo "Build complete ✅"
       - name: 5️⃣ Set up AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
