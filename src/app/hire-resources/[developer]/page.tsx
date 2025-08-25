@@ -1,3 +1,16 @@
+export async function generateStaticParams() {
+  const developerSlugs = [
+    "frontend-developer",
+    "backend-developer",
+    "fullstack-developer",
+    "ui-ux-designer",
+    "devops-engineer"
+    // add all your developer slugs here
+  ];
+
+  return developerSlugs.map(developer => ({ developer }));
+}
+
 import React from 'react';
 import Navbar from '@/components/header/navbar';
 import Image from "next/image";
