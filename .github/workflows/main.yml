@@ -37,5 +37,5 @@ jobs:
       - name: 7️⃣ Sync files to S3
         run: |
           echo "Syncing files to S3..."
-          aws s3 sync ./out s3://mapoptimist.com --delete --acl public-read
+          aws s3 sync ./out s3://mapoptimist.com --delete 
           echo "Sync complete ✅"
