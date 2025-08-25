@@ -1,3 +1,13 @@
+export async function generateStaticParams() {
+  const blogSlugs = [
+    'Semiconductor-Chip-The-Backbone-of-Modern-Technology',
+    'Understanding-AI-and-Generative-AI-Transforming-Computer-Programming',
+    "Veo-Google-DeepMind's-Advanced-Video-Generation-Model",
+    "Reinforcement-Learning-and-Generative-AI-The-Future-of-OCR-ICR"
+  ];
+
+  return blogSlugs.map(slug => ({ blog: slug }));
+}
 
 import React from "react";
 import Navbar from "@/components/header/navbar";
