@@ -1,5 +1,6 @@
 "use client"
 import InfiniteSlider from "../Sliders/InfiniteSlider";
+import Image from "next/image";
 export default function CompanyListSliderComponent() {
   const data = [
     { url: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" },
@@ -36,7 +37,7 @@ export default function CompanyListSliderComponent() {
       <InfiniteSlider speed={1}>
         {data.map((item, index) => (
           <div key={`company-${item.url}-${index}`} className="slide">
-            <img loading="lazy" src={item.url} height="100" width="250" alt={`Company ${index}`} />
+            <Image loading="lazy" src={item.url} height="100" width="250" alt={`Company ${index}`} />
           </div>
         ))}
       </InfiniteSlider>

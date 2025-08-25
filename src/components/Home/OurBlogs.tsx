@@ -9,8 +9,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import React, { useEffect, useRef, useState } from 'react';
 import ButtonWithIcon from '../Buttons/ButtonWithIcon';
 import './slider.css';
+import Image from 'next/image';
 
 import { useRouter } from "next/navigation";
+
 
 const data = [
   {
@@ -57,7 +59,7 @@ function OurBlogComponent() {
         }
       });
     }
-  }, [swiperRef?.current]);
+  }, []);
 
   const handleSlideClick = (item: { slug: string }) => {
     router.push(`/blogs/${item.slug}`);
@@ -100,7 +102,7 @@ function OurBlogComponent() {
             <SwiperSlide key={item.title + index} onClick={() => handleSlideClick(item)} className={`d-flex justify-content-center`}>
               <div className="blog-card pe-auto">
                 <div className="card_image">
-                  <img src={item.icon} className='fit-image'
+                  <Image src={item.icon} className='fit-image'
                     alt={item?.title} />
                 </div>
                 <div className="blog-card-content">

@@ -18,7 +18,7 @@ export default function WhyMappoptimistComponent({ whyPoints, whyTitle, quoteTit
       <h1 className="top-title text-white">{whyTitle}</h1>
       <div className='d-flex company-content'>
         <div className='d-flex position-relative overview-img'>
-          <img src="/assets/images/companyOverviewGIF.gif" alt="MappOptimist Technologies overview" />
+          <Image src="/assets/images/companyOverviewGIF.gif" alt="MappOptimist Technologies overview" />
           <Image className="shake shake-style" src={HumanAI} alt={whyTitle}
             style={{
               width: 'clamp(150px, 20vw, 250px)',

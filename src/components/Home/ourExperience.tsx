@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function OurExperienceComponent() {
 
 
@@ -15,7 +16,7 @@ export default function OurExperienceComponent() {
           <p className='our-experience-description'>Hire app developers to access <br /> our technical proficiency and <br /> stay ahead of the curve of the<br /> competition.</p>
         </div>
         <div className="our-experience-image">
-          <img src={"/assets/images/ex-man.png"} alt={`MappOptimist Technologies experiences`} className="our-experience-image-man float-end" />
+          <Image src={"/assets/images/ex-man.png"} alt={`MappOptimist Technologies experiences`} className="our-experience-image-man float-end" />
         </div>
       </div>
       <div className="our-experience-right">

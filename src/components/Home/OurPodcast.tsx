@@ -39,7 +39,7 @@ function OurPodcastComponent () {
         }
       });
     }
-  }, [swiperRef?.current]);
+  }, []);
 
   return (
     <div className="podcast-container">
