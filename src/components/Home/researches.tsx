@@ -69,7 +69,7 @@ function OurResearchComponent () {
             <SwiperSlide key={ item.title + index } className={ `d-flex justify-content-center` }>
               <div className="blog-card">
                 <div className="card_image">
-                  <Image src={ item.icon } className='fit-image' alt='image' />
+                  <Image src={ item.icon } className='fit-image object-contain' fill unoptimized alt='image' />
                 </div>
                 <div className="blog-card-content">
                   <h2 className="blog-card-title">{ item.title }</h2>

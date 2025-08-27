@@ -102,7 +102,7 @@ function OurBlogComponent() {
             <SwiperSlide key={item.title + index} onClick={() => handleSlideClick(item)} className={`d-flex justify-content-center`}>
               <div className="blog-card pe-auto">
                 <div className="card_image">
-                  <Image src={item.icon} className='fit-image'
+                  <Image src={item.icon} className='fit-image object-contain' fill unoptimized
                     alt={item?.title} />
                 </div>
                 <div className="blog-card-content">

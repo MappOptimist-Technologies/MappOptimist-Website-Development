@@ -1,11 +1,11 @@
 import { clientReviews } from "@/constants";
 import InfiniteSlider from "../Sliders/InfiniteSlider";
-import reviewImg1 from "../../../public/assets/review-images/images1.jpeg";
-import reviewImg2 from "../../../public/assets/review-images/images2.jpeg";
-import reviewImg3 from "../../../public/assets/review-images/images3.jpeg";
-import reviewImg4 from "../../../public/assets/review-images/images4.jpeg";
-import reviewImg5 from "../../../public/assets/review-images/images5.jpeg";
-import reviewImg6 from "../../../public/assets/review-images/Client009.png";
+import reviewImg1 from "../../../public/assets/images/images1.jpeg";
+import reviewImg2 from "../../../public/assets/images/images2.jpeg";
+import reviewImg3 from "../../../public/assets/images/images3.jpeg";
+import reviewImg4 from "../../../public/assets/images/images4.jpeg";
+import reviewImg5 from "../../../public/assets/images/images5.jpeg";
+import reviewImg6 from "../../../public/assets/images/Client009.png";
 import Image from "next/image";
 
 export default function ClientsReviewComponent() {
@@ -15,25 +15,25 @@ export default function ClientsReviewComponent() {
         <div className="client-review-big-circle">
           <div className="client-review-big-circle-inside">
             <div className="client-review-profile-block-outside">
-              <Image src= {reviewImg1.src} alt="Clients reviews about the MappOptimist Technologies"></Image>
+              <Image src= {reviewImg1.src} alt="Clients reviews about the MappOptimist Technologies object-contain" fill unoptimized></Image>
             </div>
             <div className="client-review-profile-block-outside">
-              <Image src={reviewImg2.src} alt="Clients reviews about the MappOptimist Technologies" />
+              <Image src={reviewImg2.src} alt="Clients reviews about the MappOptimist Technologies object-contain" fill unoptimized />
             </div>
             <div className="client-review-profile-block-outside">
-              <Image src={reviewImg3.src} alt="Clients reviews about the MappOptimist Technologies" />
+              <Image src={reviewImg3.src} alt="Clients reviews about the MappOptimist Technologies object-contain" fill unoptimized />
             </div>
           </div>
         </div>
         <div className="client-review-circle">
           <div className="client-review-profile-block">
-            <Image src={reviewImg4.src} alt="Clients reviews about the MappOptimist Technologies" />
+            <Image src={reviewImg4.src} alt="Clients reviews about the MappOptimist Technologies object-contain" fill unoptimized />
           </div>
           <div className="client-review-profile-block">
-            <Image src={reviewImg5.src} alt="Clients reviews about the MappOptimist Technologies" />
+            <Image src={reviewImg5.src} alt="Clients reviews about the MappOptimist Technologies object-contain" fill unoptimized />
           </div>
           <div className="client-review-profile-block">
-            <Image src={reviewImg6.src} alt="Clients reviews about the MappOptimist Technologies" />
+            <Image src={reviewImg6.src} alt="Clients reviews about the MappOptimist Technologies object-contain" fill unoptimized />
           </div>
         </div>
         <div className="center-logo">

@@ -17,7 +17,7 @@ function OurExperienceTwo() {
     <section className='our-experience-containerTwo'>
       <div className='our-experience-container-Two-Image'>
         <div className='our-experience-container-Two-left'>
-          <Image className='our-experience-container-Two-Image-Frame' src={Frame.src} alt='experience reviews' />
+          <Image className='our-experience-container-Two-Image-Frame' src={Frame.src} alt='experience reviews object-contain' fill unoptimized />
         </div>
         <div className='our-experience-container-Two-right'>
           <div className='our-experience-container-Two-scroll-track'>

@@ -12,7 +12,7 @@ const CoreValues = () => {
             src={"https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751964989/Core_Value_2_ftp1pw.jpg"}
             alt="Core Values"
             layout="fill"
-            className="img-fluid coreValue-imageone" />
+            className="img-fluid coreValue-imageone object-content" fill unoptimized/>
         </div>
         <div className="core-values-container-content" >
           <div>

@@ -7,7 +7,9 @@ export default function CompanyOverviewComponent () {
       <h1 className="top-title">We&apos;re committed to deliver only exceptional quality work</h1>
       <div className='d-flex company-content'>
         <div className='d-flex position-relative overview-img'>
-          <Image src="/assets/images/companyOverviewGIF.gif" alt="company overview" />
+          <Image src="/assets/images/companyOverviewGIF.gif" alt="company overview" fill
+    className="object-contain"
+    unoptimized/>
           <Image className="shake shake-style" src={ HumanAI } alt="Human AI"
             style={ {
               width: 'clamp(150px, 20vw, 250px)',

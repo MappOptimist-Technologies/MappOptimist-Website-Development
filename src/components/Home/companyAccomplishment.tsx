@@ -42,7 +42,7 @@ export default function CompanyAccomplishmentComponent() {
         <h1 className='accomplishment-right-title'>MappOptimist Technologies: Driving Global Business Innovation with AI-Powered custom Solutions</h1>
         <h1 className='accomplishment-right-description'>At MappOptimist Technologies, we specialize in delivering comprehensive IT solutions, including AI-driven projects, AI-powered software, AI-powered applications, website development, e-commerce website development, custom WordPress development, blockchain development, cybersecurity solutions, digital marketing solutions, and IT staff augmentation services. We adhere to industry-specific standards, combining them with our technical expertise, development proficiency, and comprehensive research to effectively address your business challenges.</h1>
         <ButtonWithIcon btnText={`Contact us`} onClick={() => { router.push("/contact") }} />
-        <Image src={"/assets/images/accomplishmentRightBg.png"} alt="MappOptimist Technologies Accomplishment" className="accomplishmentRightBg" />
+        <Image src={"/assets/images/accomplishmentRightBg.png"} alt="MappOptimist Technologies Accomplishment" className="accomplishmentRightBg object-contain" fill unoptimized />
       </div>
     </section>
   );
