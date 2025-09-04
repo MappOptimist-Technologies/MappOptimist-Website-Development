@@ -6,6 +6,7 @@ import OurBlogComponent from '@/components/Home/OurBlogs';
 import Footer from '@/components/Home/footer';
 import CompanyListSliderComponent from '@/components/Home/companySlider';
 import Link from 'next/link';
+import Image from 'next/image'; // Ensure this import is added
 
 export const metadata = {
   title: "Driving Direction Towards Smart Solutions",
@@ -276,15 +277,12 @@ export default function ServicesPage() {
     >
       {/* Left Image */}
       <div style={{ flex: "1", minWidth: "40%" }}>
-        <img
-          src={item?.limage}
-          alt={item?.title}
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
-        />
+      <Image
+    src={item?.limage}
+    alt={item?.title || "image"}
+    fill
+    style={{ objectFit: "cover" }}
+  />
       </div>
 
       {/* Right Content */}

@@ -226,7 +226,7 @@ import CSD from "../../../public/assets/images/CSD.png";
 import blockChain from "../../../public/assets/images/blockchain.png";
 import DigitalMarketing from "../../../public/assets/images/digitalMarketing.png";
 import Staff from "../../../public/assets/images/staff.png";
-import ButtonWithIcon from "../Buttons/ButtonWithIcon";
+// import ButtonWithIcon from "../Buttons/ButtonWithIcon";
 import "./slider.css"; // keep your existing card styles/animations
 
 const data = [
