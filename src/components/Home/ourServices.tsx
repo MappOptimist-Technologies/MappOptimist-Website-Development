@@ -342,82 +342,234 @@ function OurServicesComponent() {
   const router = useRouter();
 
   return (
-    <div className="w-100">
-      <div className="d-flex flex-column text-center">
-        <h1 data-aos="fade-up" className="our-services-title mt-5 mb-5">
-          Our Services
-        </h1>
-      </div>
+    // <div className="w-100">
+    //   <div className="d-flex flex-column text-center">
+    //     <h1 data-aos="fade-up" className="our-services-title mt-5 mb-5">
+    //       Our Services
+    //     </h1>
+    //   </div>
 
-      {/* Bootstrap Grid: 3 cards per row on lg+ */}
-      <div className="container">
-        <div className="row g-4 justify-content-center" data-aos="fade-up">
-          {data.map((item, index) => (
-            <div
-              key={item.title + index}
-              className="col-12 col-md-6 col-lg-4 d-flex "
-            >
-              <div
-                role="button"
-                tabIndex={0}
-                onClick={() => router.push(`/services/${item.routeName}`)}
-                onKeyDown={(e) =>
-                  (e.key === "Enter" || e.key === " ") &&
-                  router.push(`/services/${item.routeName}`)
-                }
-                className="animatedcard card-custom-shadow shadow-lg rounded-2 text-white w-100 h-100 d-flex flex-column justify-content-between p-4"
-                style={{
-                  backgroundImage: `linear-gradient(10deg, rgba(0,0,0,0.45) 30%, rgba(30,35,100,0.95) 90%), url(${item.bg})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  cursor: "pointer",
-                  minHeight: "300px",
-                  maxHeight: "400px"
-                }}
-              >
-                <div className="animated-card-content">
-                  <div className="d-flex justify-content-between align-items-start mb-3">
-                    <div>
-                      <h2 className="h4 mb-1 ">{item.title}</h2>
-                      <h3 className="h5 fw-normal m-0 ">{item.subTitle}</h3>
-                    </div>
-                    <Image
-                      src={item.icon}
-                      width={45}
-                      height={45}
-                      alt={item.title}
-                    />
-                  </div>
-                  <div
-                    className="my-3"
-                    style={{ height: 2, width: "25%", background: "rgba(255,255,255,0.5)" }}
-                  />
-                  <p className="mb-0 small">{item.description}</p>
-                </div>
+    //   {/* Bootstrap Grid: 3 cards per row on lg+ */}
+    //   <div className="container">
+    //     <div className="row g-4 justify-content-center" data-aos="fade-up">
+    //       {data.map((item, index) => (
+    //         <div
+    //           key={item.title + index}
+    //           className="col-12 col-md-6 col-lg-4 d-flex "
+    //         >
+    //           <div
+    //             role="button"
+    //             tabIndex={0}
+    //             onClick={() => router.push(`/services/${item.routeName}`)}
+    //             onKeyDown={(e) =>
+    //               (e.key === "Enter" || e.key === " ") &&
+    //               router.push(`/services/${item.routeName}`)
+    //             }
+    //             className="animatedcard card-custom-shadow shadow-lg rounded-2 text-white w-100 h-100 d-flex flex-column justify-content-between p-4"
+    //             style={{
+    //               backgroundImage: `linear-gradient(10deg, rgba(0,0,0,0.45) 30%, rgba(30,35,100,0.95) 90%), url(${item.bg})`,
+    //               backgroundSize: "cover",
+    //               backgroundPosition: "center",
+    //               backgroundRepeat: "no-repeat",
+    //               cursor: "pointer",
+    //               minHeight: "300px",
+    //               maxHeight: "400px"
+    //             }}
+    //           >
+    //             <div className="animated-card-content">
+    //               <div className="d-flex justify-content-between align-items-start mb-3">
+    //                 <div>
+    //                   <h2 className="h4 mb-1 ">{item.title}</h2>
+    //                   <h3 className="h5 fw-normal m-0 ">{item.subTitle}</h3>
+    //                 </div>
+    //                 <Image
+    //                   src={item.icon}
+    //                   width={45}
+    //                   height={45}
+    //                   alt={item.title}
+    //                 />
+    //               </div>
+    //               <div
+    //                 className="my-3"
+    //                 style={{ height: 2, width: "25%", background: "rgba(255,255,255,0.5)" }}
+    //               />
+    //               <p className="mb-0 small">{item.description}</p>
+    //             </div>
 
-                {/* Points (show top 4) */}
-                <div className="animated-card-extra mt-3">
-                  <ul className="mb-0 small ps-3">
-                    {item.points.slice(0, 4).map((point) => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+    //             {/* Points (show top 4) */}
+    //             <div className="animated-card-extra mt-3">
+    //               <ul className="mb-0 small ps-3">
+    //                 {item.points.slice(0, 4).map((point) => (
+    //                   <li key={point}>{point}</li>
+    //                 ))}
+    //               </ul>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       ))}
+    //     </div>
 
-        {/* Explore Button */}
-        <div className="d-flex justify-content-center my-5">
-          <ButtonWithIcon
-            btnText="Explore"
-            onClick={() => router.push("/services")}
+    //     {/* Explore Button */}
+    //     <div className="d-flex justify-content-center my-5">
+    //       <ButtonWithIcon
+    //         btnText="Explore"
+    //         onClick={() => router.push("/services")}
+    //       />
+    //     </div>
+    //   </div>
+    // </div>
+    <div
+  style={{
+    width: "100%",
+    maxWidth: "1200px",
+    margin: "0 auto",
+    padding: "40px 20px",
+  }}
+>
+  <h2
+    style={{
+      textAlign: "center",
+      fontSize: "3rem",
+      fontWeight: "bold",
+      marginBottom: "40px",
+      color: "#000"
+    }}
+  >
+    Our Services
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+      gap: "20px",
+    }}
+  >
+    {data.map((item, index) => (
+      <div
+        key={item.title + index}
+        style={{
+          border: "1px solid #007bff",
+          borderRadius: "10px",
+          padding: "24px",
+          background: "#fff",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          cursor: "pointer",
+        }}
+        onClick={() => router.push(`/services/${item.routeName}`)}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-5px)";
+          e.currentTarget.style.boxShadow = "0 6px 16px rgba(0,0,0,0.1)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "translateY(0)";
+          e.currentTarget.style.boxShadow = "none";
+        }}
+      >
+        {/* Icon */}
+        <div style={{ textAlign: "center", marginBottom: "16px" }}>
+          <Image
+            src={item.icon}
+            width={60}
+            height={60}
+            alt={item.title}
+            style={{ margin: "0 auto" }}
           />
         </div>
+
+        {/* Title */}
+        <h3
+          style={{
+            fontSize: "1.25rem",
+            fontWeight: "bold",
+            textAlign: "center",
+            marginBottom: "8px",
+            color: "#000",
+          }}
+        >
+          {item.title}
+        </h3>
+
+        {/* Subtitle */}
+        <h4
+          style={{
+            fontSize: "1rem",
+            fontWeight: "500",
+            textAlign: "center",
+            marginBottom: "12px",
+            color: "#333",
+          }}
+        >
+          {item.subTitle}
+        </h4>
+
+        {/* Description */}
+        <p
+          style={{
+            fontSize: "0.95rem",
+            color: "#555",
+            textAlign: "center",
+            marginBottom: "16px",
+            lineHeight: "1.5",
+          }}
+        >
+          {item.description}
+        </p>
+
+        {/* Key Points */}
+        {item?.points?.length > 0 && (
+  <ul
+    style={{
+      marginTop: "12px",
+      marginBottom: "16px",
+      paddingLeft: "20px", // indent for bullets
+      listStyleType: "disc",
+      color: "#333",
+      fontSize: "0.95rem",
+      lineHeight: "1.5",
+    }}
+  >
+    {item.points.map((chip, i) => (
+      <li key={chip + i} style={{ marginBottom: "6px" }}>
+        {chip}
+      </li>
+    ))}
+  </ul>
+)}
+
+        {/* Buttons */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "10px",
+            marginTop: "auto",
+          }}
+        >
+          <button
+            style={{
+              padding: "8px 16px",
+              border: "none",
+              borderRadius: "6px",
+              background: "#007bff",
+              color: "#fff",
+              cursor: "pointer",
+              fontSize: "0.9rem",
+              fontWeight: "500",
+            }}
+          >
+            Get Quote
+          </button>
+        </div>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
+
+
   );
 }
 
