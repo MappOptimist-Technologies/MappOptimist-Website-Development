@@ -16,7 +16,7 @@ export default function OurExperienceComponent() {
           <p className='our-experience-description'>Hire app developers to access <br /> our technical proficiency and <br /> stay ahead of the curve of the<br /> competition.</p>
         </div>
         <div className="our-experience-image">
-          <Image src={"/assets/images/ex-man.png"} alt={`MappOptimist Technologies experiences`} className="our-experience-image-man float-end object-contain" fill unoptimized />
+          <Image src={"/assets/images/ex-man.png"} alt={`MappOptimist Technologies experiences`} className="our-experience-image-man float-end object-contain" height={400} width={300} unoptimized />
         </div>
       </div>
       <div className="our-experience-right">

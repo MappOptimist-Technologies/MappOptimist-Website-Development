@@ -257,6 +257,7 @@ th {
 }
 
 .company-overview {
+  height: 100%;
   padding-left: 8%;
   padding-right: 8%;
   padding-top: 70px;
@@ -1253,7 +1254,7 @@ h4.career-fresher-sub-title {
 
 .industry-specific-expertise-container {
   width: 100%;
-  padding: 2% 0px 0%;
+  padding: 4% 0px 0%;
 }
 
 .top-it-consulting{
@@ -4343,7 +4344,7 @@ input:-webkit-autofill:active {
     position: relative;
   }
   .company-vision-image {
-    width: 83% !important;
+    width: 63% !important;
   }
   .company-vision-second-image {
     position: absolute;
@@ -4903,7 +4904,7 @@ input:-webkit-autofill:active {
     position: relative;
   }
   .company-vision-image {
-    width: 83% !important;
+    width: 63% !important;
   }
   .company-vision-second-image {
     position: absolute;
@@ -5007,4 +5008,55 @@ input:-webkit-autofill:active {
     border-top-right-radius: 100px !important;
     border-bottom-right-radius: 100px !important;
   }
+}
+
+
+
+.industries-list-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.industries-list-card1 {
+  width: 90%; /* Reduced width */
+  /* max-width: 800px; */
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.industries-list-card1:hover {
+  /* transform: scale(0.5); Add hover effect */
+}
+
+.industries-list-content1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-content1 {
+  flex: 1;
+  padding-right: 20px;
+  color: #000000;
+}
+
+.image-content1 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image1 {
+  width: 100%; /* Increased size */
+  max-width: 300px; /* Adjust as needed */
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
 }

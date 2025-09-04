@@ -29,7 +29,7 @@ const MissionVision = () => {
               <h2>
                 {a.title}
               </h2>
-              <p>
+              <p className="text-dark wo-coreValue-Opacity fs-5">
                 {a.subtitle}
               </p>
             </div>

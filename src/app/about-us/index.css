@@ -146,11 +146,11 @@ a {
 }
 
 .company-overview {
-  height: calc(100vh);
+  /* height: 100%; */
   padding-left: 150px;
   padding-right: 150px;
   padding-top: 70px;
-  background-color: white;
+  /* background-color: red; */
 }
 
 .experience-card {
@@ -487,9 +487,10 @@ a {
     flex-direction: row;
     width: 100%;
     position: relative;
+    padding-left: 20%;
   }
   .company-vision-image{
-    width: 83%;
+    width: 53%;
   }
   .company-vision-second-image{
     position: absolute;
@@ -499,6 +500,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 25%;
   }
   .company-vision-second-image-style{
     width: 100%;

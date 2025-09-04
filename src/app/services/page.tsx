@@ -218,36 +218,164 @@ export default function ServicesPage() {
           <h2>Delivering Excellence to Make Global Businesses Excellent</h2>
           <h6>We define, develop, and deploy digital solutions that can help global businesses deliver an awesome user experience. Our smart solutions help businesses enhance conversion and minimize costs while being the best in the industry. Our IT consultation team brings comprehensive technology roadmaps that can help businesses own scalable solutions. We provide end-to-end development services that are significantly designed for your project requirements and business vision.</h6>
         </div>
-        <section className="industries-list-contaner">
-          {data?.map((item, index) => (
-            <div key={item?.title} className={`industries-list-bg-image ${index % 2 === 0 ? "align-card-to-left" : ""}`}
+        {/* <section className="industries-list-container1">
+  {data?.map((item, index) => (
+    <div
+      key={item?.title}
+      className="industries-list-card1 shadow-lg"
+      style={{ backgroundColor: item?.bgcolor || `#f${index}f${index}f${index}` }} // Dynamic background color
+    >
+      <div className="industries-list-content1">
+        <div className="text-content1">
+          <h1 style={{ textAlign: "center" }}>{item?.title}</h1>
+          <h3 className="service-item-h3 mt-3">{item.subtitle}</h3>
+          <h3 style={{ whiteSpace: 'pre-line' }}>{item?.description}</h3>
+          <h4 className="service-item-h4 mt-4">{item.serviceIncludes}</h4>
+          <ul className="custom-bullets1 mt-2">
+            {item?.chips?.map((i, a) => (
+              <li key={i + a}>{i}</li>
+            ))}
+          </ul>
+          <h6 className="service-item-h6 mt-3 mb-4">{item.serviceOtherText}</h6>
+          <Link href={`/services/${item.routeName}`}>
+            <ButtonWithIcon btnText="Explore" />
+          </Link>
+        </div>
+        <div className="image-content1">
+          <img
+            src={item?.limage}
+            alt={item?.title}
+            className="card-image1"
+          />
+        </div>
+      </div>
+    </div>
+  ))}
+</section> */}
+<section
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "2rem",
+    width: "95%",
+    margin: "0 auto", // centers the whole section
+  }}
+>
+  {data?.map((item, index) => (
+    <div
+      key={item?.title}
+      style={{
+        display: "flex",
+        flexDirection: index % 2 === 0 ? "row" : "row-reverse", // alternate layout
+        borderRadius: "16px",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+        overflow: "hidden",
+        backgroundColor: item?.bgcolor || `#f${index}f${index}f${index}`,
+        color: "#000",
+      }}
+    >
+      {/* Left Image */}
+      <div style={{ flex: "1", minWidth: "40%" }}>
+        <img
+          src={item?.limage}
+          alt={item?.title}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+      </div>
+
+      {/* Right Content */}
+      <div
+        style={{
+          flex: "1",
+          padding: "24px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: "2rem", // ✅ Increased font size
+            fontWeight: "bold",
+            textAlign: "center",
+            marginBottom: "1rem",
+          }}
+        >
+          {item?.title}
+        </h1>
+
+        <h3 style={{ marginTop: "12px", fontSize: "1.1rem", fontWeight: 500 }}>
+          {item?.subtitle}
+        </h3>
+
+        <h3
+          style={{
+            marginTop: "8px",
+            color: "#555",
+            whiteSpace: "pre-line",
+          }}
+        >
+          {item?.description}
+        </h3>
+
+        <h4 style={{ marginTop: "16px", fontWeight: "600" }}>
+          {item?.serviceIncludes}
+        </h4>
+
+        <ul
+          style={{
+            marginTop: "8px",
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "8px",
+            padding: 0,
+            listStyle: "none",
+          }}
+        >
+          {item?.chips?.map((i, a) => (
+            <li
+              key={i + a}
               style={{
-                backgroundImage: `url(${item?.limage})`,
-                backgroundSize: 'cover',
+                padding: "6px 12px",
+                border: "1px solid #ccc",
+                borderRadius: "20px",
+                fontSize: "0.9rem",
+                color: "#333",
               }}
             >
-              <div className='industries-list-card shadow-lg'>
-                <div className='industries-list-content'>
-                  <h1>{item?.title}</h1>
-                  <h3 className='service-item-h3 mt-3'>{item.subtitle}</h3>
-                  <h3 style={{ whiteSpace: 'pre-line' }}>{item?.description}</h3>
-                  <h4 className='service-item-h4 mt-4'>{item.serviceIncludes}</h4>
-                  <ul className="custom-bullets mt-2">
-                    {item?.chips?.map((i, a) => (
-                      <li key={i + a} >
-                        {i}
-                      </li>
-                    ))}
-                  </ul>
-                  <h6 className='service-item-h6 mt-3 mb-4'>{item.serviceOtherText}</h6>
-                  <Link href={`/services/${item.routeName}`}>
-                    <ButtonWithIcon btnText="Explore" />
-                  </Link>
-                </div>
-              </div>
-            </div>
+              {i}
+            </li>
           ))}
-        </section>
+        </ul>
+
+        <h6
+          style={{
+            marginTop: "12px",
+            marginBottom: "16px",
+            fontSize: "0.85rem",
+            color: "#666",
+          }}
+        >
+          {item?.serviceOtherText}
+        </h6>
+
+        <Link
+          href={`/services/${item.routeName}`}
+          style={{ marginTop: "8px", display: "inline-block" }}
+        >
+          <ButtonWithIcon btnText="Explore" />
+        </Link>
+      </div>
+    </div>
+  ))}
+</section>
+
+
+
         <IndustrySpecificExpertiseComponent />
         <OurBlogComponent />
         <div className="common-footer-container">
