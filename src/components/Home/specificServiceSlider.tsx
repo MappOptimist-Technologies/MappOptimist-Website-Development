@@ -1,4 +1,4 @@
-import { Pagination, Navigation, FreeMode, Mousewheel } from 'swiper/modules';
+import { Pagination, Navigation, FreeMode } from 'swiper/modules';
 import SwiperCore from 'swiper';
 import Image from 'next/image';
 import 'swiper/css';
@@ -23,7 +23,7 @@ function SpecificServiceSliderComponent({ data, title }: any) {
       <div className='d-flex position-relative' data-aos="fade-up">
         <Swiper
           className="swiper service-swiper-margin-container"
-          modules={[Navigation, Pagination, FreeMode, Mousewheel]}
+          modules={[Navigation, Pagination, FreeMode]}
           slidesPerView={3}
           mousewheel={true}
           onSwiper={(swiper) => (swiperRef.current = swiper)}

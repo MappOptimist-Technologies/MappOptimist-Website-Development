@@ -16,7 +16,7 @@ export default function WhyMappoptimistComponent({ whyPoints, whyTitle, quoteTit
   return (
     <div className='company-overview why-container'>
       <h1 className="top-title text-white">{whyTitle}</h1>
-      <div className='d-flex company-content'>
+      {/* <div className='d-flex company-content'>
         <div className='d-flex position-relative overview-img'>
           <Image src="/assets/images/companyOverviewGIF.gif" alt="MappOptimist Technologies overview" fill
     className="object-contain"
@@ -27,8 +27,8 @@ export default function WhyMappoptimistComponent({ whyPoints, whyTitle, quoteTit
               height: 'clamp(150px, 20vw, 250px)',
             }} />
         </div>
-      </div>
-      <div className="d-flex justify-content-end">
+      </div> */}
+      {/* <div className="d-flex justify-content-end">
         <div className="experience-card why-card">
           <div className="row">
             <div className="col-6">
@@ -57,7 +57,7 @@ export default function WhyMappoptimistComponent({ whyPoints, whyTitle, quoteTit
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className='why-points pb-3'>
         <ul className="service-specifc-card-points why-points-gap">
           {whyPoints?.map((point: string) => (

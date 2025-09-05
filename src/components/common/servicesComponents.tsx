@@ -130,9 +130,9 @@ export default function ServicesCommonComponents({ specificServiceSlider, techno
           </div>
         </div>
         {displayIndustriesSlider ? <section className="mt-0 mb-5 ">
-          <ServiceIndustriesSliderComponent
+          {/* <ServiceIndustriesSliderComponent
             data={industriesData}
-            title={serviceIndustriesSliderTitle} />
+            title={serviceIndustriesSliderTitle} /> */}
         </section> : null}
         <WhyMappoptimistComponent
           whyPoints={whyPoints}
