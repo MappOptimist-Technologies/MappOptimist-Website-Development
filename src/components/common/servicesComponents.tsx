@@ -9,13 +9,12 @@ import ButtonWithIcon from '@/components/Buttons/ButtonWithIcon';
 import CompanyListSliderComponent from '@/components/Home/companySlider';
 import SpecificServiceSliderComponent from '@/components/Home/specificServiceSlider';
 import OurServicesComponent from '@/components/Home/ourServices';
-import ServiceIndustriesSliderComponent from '@/components/Home/serviceIndustriesSlider';
+// import ServiceIndustriesSliderComponent from '@/components/Home/serviceIndustriesSlider';
 import WhyMappoptimistComponent from '@/components/Home/whyMappoptimistics';
 import { TechnologiesDataType } from '@/app/services/ai-machine-learning-development-services/page';
 
-export default function ServicesCommonComponents({ specificServiceSlider, technologiesData, industriesData, whyPoints,
-  mainTitle, mainDescription, title, description, specificServiceSliderTitle, technologyTitle, technologySubTitle,
-  serviceIndustriesSliderTitle, whyTitle, quoteTitle, quoteDescription, quoteBtnText, technologyDescription, coverImage,
+export default function ServicesCommonComponents({ specificServiceSlider, technologiesData, whyPoints,
+  mainTitle, mainDescription, title, description, specificServiceSliderTitle, technologyTitle, technologySubTitle, whyTitle, quoteTitle, quoteDescription, quoteBtnText, technologyDescription, coverImage,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   displayIndustriesSlider = true }: any) {
 

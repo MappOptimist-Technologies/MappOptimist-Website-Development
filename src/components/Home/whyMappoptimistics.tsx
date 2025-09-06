@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import HumanAI from "../../../public/assets/images/human-ai.png";
+// import Image from 'next/image';
+// import HumanAI from "../../../public/assets/images/human-ai.png";
 import QuoteComponent from './getQuote';
 
 interface WhyMappoptimistProps {
