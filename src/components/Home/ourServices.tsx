@@ -215,10 +215,398 @@
 
 
 
-"use client"
+
+
+
+
+
+// "use client"
+// import React from "react";
+// import Image from "next/image";
+// import { useRouter } from "next/navigation";
+// import AIMLIcon from "../../../public/assets/images/AI-ML.png";
+// import WebDevIcon from "../../../public/assets/images/WebDev.png";
+// import MobileDev from "../../../public/assets/images/mobileDev.png";
+// import CSD from "../../../public/assets/images/CSD.png";
+// import blockChain from "../../../public/assets/images/blockchain.png";
+// import DigitalMarketing from "../../../public/assets/images/digitalMarketing.png";
+// import Staff from "../../../public/assets/images/staff.png";
+// // import ButtonWithIcon from "../Buttons/ButtonWithIcon";
+// import "./slider.css"; // keep your existing card styles/animations
+// import { Ubuntu } from "next/font/google";
+// import Link from "next/link";
+// import ButtonWithIcon from "../Buttons/ButtonWithIcon";
+
+
+
+
+// const ubuntu = Ubuntu({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-ubuntu-sans' })
+
+// const data = [
+//   {
+//     title: "AI/ML Project",
+//     subTitle: "Development",
+//     description:
+//       "Revolutionize your operations with our AI-driven projects and artificial intelligence software solutions.",
+//     icon: AIMLIcon,
+//     bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887702/AI-ML_development_thypt5.jpg",
+//     points: [
+//       "AI-Agents",
+//       "Generative AI (Gen AI)",
+//       "AI Consultation",
+//       "Machine Learning Model Development",
+//       "Natural Language Processing (NLP)",
+//       "Computer Vision",
+//       "Recommendation Systems",
+//       "Predictive Analysis",
+//     ],
+//     routeName: "ai-machine-learning-development-services",
+//   },
+//   {
+//     title: "Mobile Application",
+//     subTitle: "Development",
+//     description:
+//       "Custom mobile app development for iOS, Android, and cross-platform solutions.",
+//     icon: MobileDev,
+//     bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887703/Mobile_Application_Devel_opment_t2btno.jpg",
+//     points: [
+//       "iOS App Development",
+//       "Android App Development",
+//       "Cross-Platform",
+//       "Hybrid Apps",
+//       "AI-Powered Apps",
+//     ],
+//     routeName: "mobile-app-development-services",
+//   },
+//   {
+//     title: "Website ",
+//     subTitle: "Development",
+//     description:
+//       "Fast, secure, and scalable websites tailored to your business needs.",
+//     icon: WebDevIcon,
+//     bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887703/Website_Development_fdczid.jpg",
+//     points: [
+//       "Custom Websites",
+//       "E-Commerce",
+//       "WordPress",
+//       "Responsive Design",
+//       "SEO-Optimized",
+//     ],
+//     routeName: "website-development-services",
+//   },
+//   {
+//     title: "Custom Software",
+//     subTitle: "Development",
+//     description:
+//       "Enterprise-grade and AI-powered custom software to match your workflow.",
+//     icon: CSD,
+//     bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751956237/Custom_Software_Development_qqrsew.jpg",
+//     points: [
+//       "Tailored Solutions",
+//       "Enterprise Software",
+//       "AI-Powered Software",
+//       "Cross-Platform",
+//     ],
+//     routeName: "custom-software-development-services",
+//   },
+//   {
+//     title: "BlockChain",
+//     subTitle: "Development",
+//     description:
+//       "Secure and scalable blockchain solutions and decentralized applications.",
+//     icon: blockChain,
+//     bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751957295/Our_services_banner_images_mhn0rc.jpg",
+//     points: [
+//       "Apps",
+//       "Smart Contracts",
+//       "Blockchain Integration",
+//       "Token Development",
+//     ],
+//     routeName: "blockchain-solution-development-services",
+//   },
+//   {
+//     title: "Digital Marketing",
+//     subTitle: "Services",
+//     description:
+//       "Full-funnel digital marketing to grow your brand and revenue.",
+//     icon: DigitalMarketing,
+//     bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887702/Digital_Marketting_bongzc.jpg",
+//     points: ["SEO", "Social Media", "Content Marketing", "PPC", "Email"],
+//     routeName: "digital-marketing-solution-services",
+//   },
+//   {
+//     title: "IT Staff Augmentation",
+//     subTitle: "Services",
+//     description:
+//       "Flexible staffing to meet project goals without long-term hiring.",
+//     icon: Staff,
+//     bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887705/Staff-Agumentation_Services_zrds8j.jpg",
+//     points: [
+//       "Scalable Teams",
+//       "Short-term/Contract",
+//       "Long-Term Engagement",
+//       "Cost-Effective",
+//     ],
+//     routeName: "it-staff-augmentation-services",
+//   },
+// ];
+
+// function OurServicesComponent() {
+//   const router = useRouter();
+
+//   return (
+//     // <div className="w-100">
+//     //   <div className="d-flex flex-column text-center">
+//     //     <h1 data-aos="fade-up" className="our-services-title mt-5 mb-5">
+//     //       Our Services
+//     //     </h1>
+//     //   </div>
+
+//     //   {/* Bootstrap Grid: 3 cards per row on lg+ */}
+//     //   <div className="container">
+//     //     <div className="row g-4 justify-content-center" data-aos="fade-up">
+//     //       {data.map((item, index) => (
+//     //         <div
+//     //           key={item.title + index}
+//     //           className="col-12 col-md-6 col-lg-4 d-flex "
+//     //         >
+//     //           <div
+//     //             role="button"
+//     //             tabIndex={0}
+//     //             onClick={() => router.push(`/services/${item.routeName}`)}
+//     //             onKeyDown={(e) =>
+//     //               (e.key === "Enter" || e.key === " ") &&
+//     //               router.push(`/services/${item.routeName}`)
+//     //             }
+//     //             className="animatedcard card-custom-shadow shadow-lg rounded-2 text-white w-100 h-100 d-flex flex-column justify-content-between p-4"
+//     //             style={{
+//     //               backgroundImage: `linear-gradient(10deg, rgba(0,0,0,0.45) 30%, rgba(30,35,100,0.95) 90%), url(${item.bg})`,
+//     //               backgroundSize: "cover",
+//     //               backgroundPosition: "center",
+//     //               backgroundRepeat: "no-repeat",
+//     //               cursor: "pointer",
+//     //               minHeight: "300px",
+//     //               maxHeight: "400px"
+//     //             }}
+//     //           >
+//     //             <div className="animated-card-content">
+//     //               <div className="d-flex justify-content-between align-items-start mb-3">
+//     //                 <div>
+//     //                   <h2 className="h4 mb-1 ">{item.title}</h2>
+//     //                   <h3 className="h5 fw-normal m-0 ">{item.subTitle}</h3>
+//     //                 </div>
+//     //                 <Image
+//     //                   src={item.icon}
+//     //                   width={45}
+//     //                   height={45}
+//     //                   alt={item.title}
+//     //                 />
+//     //               </div>
+//     //               <div
+//     //                 className="my-3"
+//     //                 style={{ height: 2, width: "25%", background: "rgba(255,255,255,0.5)" }}
+//     //               />
+//     //               <p className="mb-0 small">{item.description}</p>
+//     //             </div>
+
+//     //             {/* Points (show top 4) */}
+//     //             <div className="animated-card-extra mt-3">
+//     //               <ul className="mb-0 small ps-3">
+//     //                 {item.points.slice(0, 4).map((point) => (
+//     //                   <li key={point}>{point}</li>
+//     //                 ))}
+//     //               </ul>
+//     //             </div>
+//     //           </div>
+//     //         </div>
+//     //       ))}
+//     //     </div>
+
+//     //     {/* Explore Button */}
+//     //     <div className="d-flex justify-content-center my-5">
+//     //       <ButtonWithIcon
+//     //         btnText="Explore"
+//     //         onClick={() => router.push("/services")}
+//     //       />
+//     //     </div>
+//     //   </div>
+//     // </div>
+//     <div
+//   style={{
+//     width: "100%",
+//     maxWidth: "1200px",
+//     margin: "0 auto",
+//     padding: "40px 20px",
+//   }}
+// >
+//   <h2
+//     style={{
+//       textAlign: "center",
+//       fontSize: "3rem",
+//       fontWeight: "bold",
+//       marginBottom: "40px",
+//       color: "#000"
+//     }}
+//   >
+//     Our Services
+//   </h2>
+
+//   <div
+//     style={{
+//       display: "grid",
+//       gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+//       gap: "20px",
+//     }}
+//   >
+//     {data.map((item, index) => (
+//       <div
+//         key={item.title + index}
+//         style={{
+//           border: "1px solid #007bff",
+//           borderRadius: "10px",
+//           padding: "24px",
+//           background: "#fff",
+//           display: "flex",
+//           flexDirection: "column",
+//           justifyContent: "space-between",
+//           transition: "transform 0.3s ease, box-shadow 0.3s ease",
+//           cursor: "pointer",
+//         }}
+//         onClick={() => router.push(`/services/${item.routeName}`)}
+//         onMouseEnter={(e) => {
+//           e.currentTarget.style.transform = "translateY(-5px)";
+//           e.currentTarget.style.boxShadow = "0 6px 16px rgba(0,0,0,0.1)";
+//         }}
+//         onMouseLeave={(e) => {
+//           e.currentTarget.style.transform = "translateY(0)";
+//           e.currentTarget.style.boxShadow = "none";
+//         }}
+//       >
+//         {/* Icon */}
+//         <div style={{ textAlign: "center", marginBottom: "16px" }}>
+//           <Image
+//             src={item.icon}
+//             width={60}
+//             height={60}
+//             alt={item.title}
+//             style={{ margin: "0 auto" }}
+//           />
+//         </div>
+
+//         {/* Title */}
+//         <h3 className={ubuntu.variable}
+//           style={{
+//             fontSize: "2rem",
+//             fontWeight: "bold",
+//             fontFamily: "var(--font-ubuntu-sans)",
+//             textAlign: "center",
+//             marginBottom: "8px",
+//             color: "#000",
+//           }}
+//         >
+//           {item.title}
+//         </h3>
+
+//         {/* Subtitle */}
+//         <h4 className={ubuntu.variable}
+//           style={{
+//             fontSize: "1.25rem",
+//             fontWeight: "500",
+//             // fontfamily: "--font-ubuntu-sans",
+//             fontFamily: "var(--font-ubuntu-sans)",
+//             textAlign: "center",
+//             marginBottom: "12px",
+//             color: "#333",
+//           }}
+//         >
+//           {item.subTitle}
+//         </h4>
+
+//         {/* Description */}
+//         <p className={ubuntu.variable}
+//           style={{
+//             fontSize: "0.95rem",
+//             fontWeight: "500",
+//             fontFamily: "var(--font-ubuntu-sans)",
+//             color: "#555",
+//             textAlign: "center",
+//             marginBottom: "16px",
+//             lineHeight: "1.5",
+//           }}
+//         >
+//           {item.description}
+//         </p>
+
+//         {/* Key Points */}
+//         {item?.points?.length > 0 && (
+//   <ul className={ubuntu.variable}
+//     style={{
+//       marginTop: "12px",
+//       marginBottom: "16px",
+//       fontFamily: "var(--font-ubuntu-sans)",
+//       paddingLeft: "20px", // indent for bullets
+//       listStyleType: "disc",
+//       color: "#555",
+//       fontSize: "0.95rem",
+//       fontWeight: "500",
+//       lineHeight: "1.5",
+//     }}
+//   >
+//     {item.points.map((chip, i) => (
+//       <li key={chip + i} style={{ marginBottom: "6px" }}>
+//         {chip}
+//       </li>
+//     ))}
+//   </ul>
+// )}
+
+//         {/* Buttons */}
+//         {/* <div
+//           style={{
+//             display: "flex",
+//             justifyContent: "center",
+//             gap: "10px",
+//             marginTop: "auto",
+//           }}
+//         >
+//           <button
+//             style={{
+//               padding: "8px 16px",
+//               border: "none",
+//               borderRadius: "6px",
+//               background: "#007bff",
+//               color: "#fff",
+//               cursor: "pointer",
+//               fontSize: "0.9rem",
+//               fontWeight: "500",
+//             }}
+//           >
+//             Get Quote
+//           </button>
+//         </div> */}
+//         <div className="mb-4 flex justify-center">
+//                     {/* <Link href={`/services/${category.routeName}`}> */}
+//                     <ButtonWithIcon btnText="Explore" />
+//                   {/* </Link> */}
+//                   </div>
+
+//       </div>
+//     ))}
+//   </div>
+// </div>
+
+
+//   );
+// }
+
+// export default OurServicesComponent;
+
+
+
+"use client";
 import React from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import AIMLIcon from "../../../public/assets/images/AI-ML.png";
 import WebDevIcon from "../../../public/assets/images/WebDev.png";
 import MobileDev from "../../../public/assets/images/mobileDev.png";
@@ -226,8 +614,15 @@ import CSD from "../../../public/assets/images/CSD.png";
 import blockChain from "../../../public/assets/images/blockchain.png";
 import DigitalMarketing from "../../../public/assets/images/digitalMarketing.png";
 import Staff from "../../../public/assets/images/staff.png";
-// import ButtonWithIcon from "../Buttons/ButtonWithIcon";
-import "./slider.css"; // keep your existing card styles/animations
+import "./slider.css"; 
+import { Ubuntu } from "next/font/google";
+import ButtonWithIcon from "../Buttons/ButtonWithIcon";
+
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-ubuntu-sans",
+});
 
 const data = [
   {
@@ -236,7 +631,6 @@ const data = [
     description:
       "Revolutionize your operations with our AI-driven projects and artificial intelligence software solutions.",
     icon: AIMLIcon,
-    bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887702/AI-ML_development_thypt5.jpg",
     points: [
       "AI-Agents",
       "Generative AI (Gen AI)",
@@ -255,7 +649,6 @@ const data = [
     description:
       "Custom mobile app development for iOS, Android, and cross-platform solutions.",
     icon: MobileDev,
-    bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887703/Mobile_Application_Devel_opment_t2btno.jpg",
     points: [
       "iOS App Development",
       "Android App Development",
@@ -266,12 +659,11 @@ const data = [
     routeName: "mobile-app-development-services",
   },
   {
-    title: "Website ",
+    title: "Website",
     subTitle: "Development",
     description:
       "Fast, secure, and scalable websites tailored to your business needs.",
     icon: WebDevIcon,
-    bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887703/Website_Development_fdczid.jpg",
     points: [
       "Custom Websites",
       "E-Commerce",
@@ -287,7 +679,6 @@ const data = [
     description:
       "Enterprise-grade and AI-powered custom software to match your workflow.",
     icon: CSD,
-    bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751956237/Custom_Software_Development_qqrsew.jpg",
     points: [
       "Tailored Solutions",
       "Enterprise Software",
@@ -302,7 +693,6 @@ const data = [
     description:
       "Secure and scalable blockchain solutions and decentralized applications.",
     icon: blockChain,
-    bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751957295/Our_services_banner_images_mhn0rc.jpg",
     points: [
       "Apps",
       "Smart Contracts",
@@ -317,7 +707,6 @@ const data = [
     description:
       "Full-funnel digital marketing to grow your brand and revenue.",
     icon: DigitalMarketing,
-    bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887702/Digital_Marketting_bongzc.jpg",
     points: ["SEO", "Social Media", "Content Marketing", "PPC", "Email"],
     routeName: "digital-marketing-solution-services",
   },
@@ -327,7 +716,6 @@ const data = [
     description:
       "Flexible staffing to meet project goals without long-term hiring.",
     icon: Staff,
-    bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887705/Staff-Agumentation_Services_zrds8j.jpg",
     points: [
       "Scalable Teams",
       "Short-term/Contract",
@@ -339,237 +727,155 @@ const data = [
 ];
 
 function OurServicesComponent() {
-  const router = useRouter();
-
   return (
-    // <div className="w-100">
-    //   <div className="d-flex flex-column text-center">
-    //     <h1 data-aos="fade-up" className="our-services-title mt-5 mb-5">
-    //       Our Services
-    //     </h1>
-    //   </div>
-
-    //   {/* Bootstrap Grid: 3 cards per row on lg+ */}
-    //   <div className="container">
-    //     <div className="row g-4 justify-content-center" data-aos="fade-up">
-    //       {data.map((item, index) => (
-    //         <div
-    //           key={item.title + index}
-    //           className="col-12 col-md-6 col-lg-4 d-flex "
-    //         >
-    //           <div
-    //             role="button"
-    //             tabIndex={0}
-    //             onClick={() => router.push(`/services/${item.routeName}`)}
-    //             onKeyDown={(e) =>
-    //               (e.key === "Enter" || e.key === " ") &&
-    //               router.push(`/services/${item.routeName}`)
-    //             }
-    //             className="animatedcard card-custom-shadow shadow-lg rounded-2 text-white w-100 h-100 d-flex flex-column justify-content-between p-4"
-    //             style={{
-    //               backgroundImage: `linear-gradient(10deg, rgba(0,0,0,0.45) 30%, rgba(30,35,100,0.95) 90%), url(${item.bg})`,
-    //               backgroundSize: "cover",
-    //               backgroundPosition: "center",
-    //               backgroundRepeat: "no-repeat",
-    //               cursor: "pointer",
-    //               minHeight: "300px",
-    //               maxHeight: "400px"
-    //             }}
-    //           >
-    //             <div className="animated-card-content">
-    //               <div className="d-flex justify-content-between align-items-start mb-3">
-    //                 <div>
-    //                   <h2 className="h4 mb-1 ">{item.title}</h2>
-    //                   <h3 className="h5 fw-normal m-0 ">{item.subTitle}</h3>
-    //                 </div>
-    //                 <Image
-    //                   src={item.icon}
-    //                   width={45}
-    //                   height={45}
-    //                   alt={item.title}
-    //                 />
-    //               </div>
-    //               <div
-    //                 className="my-3"
-    //                 style={{ height: 2, width: "25%", background: "rgba(255,255,255,0.5)" }}
-    //               />
-    //               <p className="mb-0 small">{item.description}</p>
-    //             </div>
-
-    //             {/* Points (show top 4) */}
-    //             <div className="animated-card-extra mt-3">
-    //               <ul className="mb-0 small ps-3">
-    //                 {item.points.slice(0, 4).map((point) => (
-    //                   <li key={point}>{point}</li>
-    //                 ))}
-    //               </ul>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       ))}
-    //     </div>
-
-    //     {/* Explore Button */}
-    //     <div className="d-flex justify-content-center my-5">
-    //       <ButtonWithIcon
-    //         btnText="Explore"
-    //         onClick={() => router.push("/services")}
-    //       />
-    //     </div>
-    //   </div>
-    // </div>
     <div
-  style={{
-    width: "100%",
-    maxWidth: "1200px",
-    margin: "0 auto",
-    padding: "40px 20px",
-  }}
->
-  <h2
-    style={{
-      textAlign: "center",
-      fontSize: "3rem",
-      fontWeight: "bold",
-      marginBottom: "40px",
-      color: "#000"
-    }}
-  >
-    Our Services
-  </h2>
-
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-      gap: "20px",
-    }}
-  >
-    {data.map((item, index) => (
-      <div
-        key={item.title + index}
+      style={{
+        width: "100%",
+        maxWidth: "1200px",
+        margin: "0 auto",
+        padding: "40px 20px",
+      }}
+    >
+      <h2
+        className={ubuntu.className}
         style={{
-          border: "1px solid #007bff",
-          borderRadius: "10px",
-          padding: "24px",
-          background: "#fff",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          transition: "transform 0.3s ease, box-shadow 0.3s ease",
-          cursor: "pointer",
-        }}
-        onClick={() => router.push(`/services/${item.routeName}`)}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "translateY(-5px)";
-          e.currentTarget.style.boxShadow = "0 6px 16px rgba(0,0,0,0.1)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "translateY(0)";
-          e.currentTarget.style.boxShadow = "none";
+          textAlign: "center",
+          fontSize: "3rem",
+          fontWeight: "bold",
+          marginBottom: "40px",
+          color: "#000",
         }}
       >
-        {/* Icon */}
-        <div style={{ textAlign: "center", marginBottom: "16px" }}>
-          <Image
-            src={item.icon}
-            width={60}
-            height={60}
-            alt={item.title}
-            style={{ margin: "0 auto" }}
-          />
-        </div>
+        Our Services
+      </h2>
 
-        {/* Title */}
-        <h3
-          style={{
-            fontSize: "1.25rem",
-            fontWeight: "bold",
-            textAlign: "center",
-            marginBottom: "8px",
-            color: "#000",
-          }}
-        >
-          {item.title}
-        </h3>
-
-        {/* Subtitle */}
-        <h4
-          style={{
-            fontSize: "1rem",
-            fontWeight: "500",
-            textAlign: "center",
-            marginBottom: "12px",
-            color: "#333",
-          }}
-        >
-          {item.subTitle}
-        </h4>
-
-        {/* Description */}
-        <p
-          style={{
-            fontSize: "0.95rem",
-            color: "#555",
-            textAlign: "center",
-            marginBottom: "16px",
-            lineHeight: "1.5",
-          }}
-        >
-          {item.description}
-        </p>
-
-        {/* Key Points */}
-        {item?.points?.length > 0 && (
-  <ul
-    style={{
-      marginTop: "12px",
-      marginBottom: "16px",
-      paddingLeft: "20px", // indent for bullets
-      listStyleType: "disc",
-      color: "#333",
-      fontSize: "0.95rem",
-      lineHeight: "1.5",
-    }}
-  >
-    {item.points.map((chip, i) => (
-      <li key={chip + i} style={{ marginBottom: "6px" }}>
-        {chip}
-      </li>
-    ))}
-  </ul>
-)}
-
-        {/* Buttons */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "10px",
-            marginTop: "auto",
-          }}
-        >
-          <button
+      {/* Flexbox wrapper */}
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "20px",
+          justifyContent: "center", // centers last row
+        }}
+      >
+        {data.map((item, index) => (
+          <div
+            key={item.title + index}
             style={{
-              padding: "8px 16px",
-              border: "none",
-              borderRadius: "6px",
-              background: "#007bff",
-              color: "#fff",
+              flex: "0 1 calc(33.333% - 20px)", // 3 cards per row
+              minWidth: "280px",
+              maxWidth: "360px",
+              border: "1px solid #007bff",
+              borderRadius: "10px",
+              padding: "24px",
+              background: "#fff",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
               cursor: "pointer",
-              fontSize: "0.9rem",
-              fontWeight: "500",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-6px)";
+              e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.15)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "none";
             }}
           >
-            Get Quote
-          </button>
-        </div>
+            <Link
+              href={`/services/${item.routeName}`}
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              {/* Icon */}
+              <div style={{ textAlign: "center", marginBottom: "16px" }}>
+                <Image
+                  src={item.icon}
+                  width={60}
+                  height={60}
+                  alt={item.title}
+                  style={{ margin: "0 auto" }}
+                />
+              </div>
+
+              {/* Title */}
+              <h3
+                className={ubuntu.className}
+                style={{
+                  fontSize: "2rem",
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  marginBottom: "8px",
+                  color: "#000",
+                }}
+              >
+                {item.title}
+              </h3>
+
+              {/* Subtitle */}
+              <h4
+                className={ubuntu.className}
+                style={{
+                  fontSize: "1.25rem",
+                  fontWeight: "500",
+                  textAlign: "center",
+                  marginBottom: "12px",
+                  color: "#333",
+                }}
+              >
+                {item.subTitle}
+              </h4>
+
+              {/* Description */}
+              <p
+                className={ubuntu.className}
+                style={{
+                  fontSize: "0.95rem",
+                  fontWeight: "500",
+                  color: "#555",
+                  textAlign: "center",
+                  marginBottom: "16px",
+                  lineHeight: "1.5",
+                }}
+              >
+                {item.description}
+              </p>
+
+              {/* Key Points */}
+              {item?.points?.length > 0 && (
+                <ul
+                  className={ubuntu.className}
+                  style={{
+                    marginTop: "12px",
+                    marginBottom: "16px",
+                    paddingLeft: "20px",
+                    listStyleType: "disc",
+                    color: "#555",
+                    fontSize: "0.95rem",
+                    fontWeight: "500",
+                    lineHeight: "1.5",
+                  }}
+                >
+                  {item.points.map((chip, i) => (
+                    <li key={chip + i} style={{ marginBottom: "6px" }}>
+                      {chip}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </Link>
+
+            {/* Explore Button */}
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Link href={`/services/${item.routeName}`}>
+                <ButtonWithIcon btnText="Explore" />
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-</div>
-
-
+    </div>
   );
 }
 
