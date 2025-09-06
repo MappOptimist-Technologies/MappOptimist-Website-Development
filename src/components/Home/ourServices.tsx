@@ -624,116 +624,158 @@ const ubuntu = Ubuntu({
   variable: "--font-ubuntu-sans",
 });
 
+// const data = [
+//   {
+//     title: "AI/ML Project",
+//     subTitle: "Development",
+//     description:
+//       "Revolutionize your operations with our AI-driven projects and artificial intelligence software solutions.",
+//     icon: AIMLIcon,
+//     points: [
+//       "AI-Agents",
+//       "Generative AI (Gen AI)",
+//       "AI Consultation",
+//       "Machine Learning Model Development",
+//       "Natural Language Processing (NLP)",
+//       "Computer Vision",
+//       "Recommendation Systems",
+//       "Predictive Analysis",
+//     ],
+//     routeName: "ai-machine-learning-development-services",
+//   },
+//   {
+//     title: "Mobile Application",
+//     subTitle: "Development",
+//     description:
+//       "Custom mobile app development for iOS, Android, and cross-platform solutions.",
+//     icon: MobileDev,
+//     points: [
+//       "iOS App Development",
+//       "Android App Development",
+//       "Cross-Platform",
+//       "Hybrid Apps",
+//       "AI-Powered Apps",
+//     ],
+//     routeName: "mobile-app-development-services",
+//   },
+//   {
+//     title: "Website",
+//     subTitle: "Development",
+//     description:
+//       "Fast, secure, and scalable websites tailored to your business needs.",
+//     icon: WebDevIcon,
+//     points: [
+//       "Custom Websites",
+//       "E-Commerce",
+//       "WordPress",
+//       "Responsive Design",
+//       "SEO-Optimized",
+//     ],
+//     routeName: "website-development-services",
+//   },
+//   {
+//     title: "Custom Software",
+//     subTitle: "Development",
+//     description:
+//       "Enterprise-grade and AI-powered custom software to match your workflow.",
+//     icon: CSD,
+//     points: [
+//       "Tailored Solutions",
+//       "Enterprise Software",
+//       "AI-Powered Software",
+//       "Cross-Platform",
+//     ],
+//     routeName: "custom-software-development-services",
+//   },
+//   {
+//     title: "BlockChain",
+//     subTitle: "Development",
+//     description:
+//       "Secure and scalable blockchain solutions and decentralized applications.",
+//     icon: blockChain,
+//     points: [
+//       "Apps",
+//       "Smart Contracts",
+//       "Blockchain Integration",
+//       "Token Development",
+//     ],
+//     routeName: "blockchain-solution-development-services",
+//   },
+//   {
+//     title: "Digital Marketing",
+//     subTitle: "Services",
+//     description:
+//       "Full-funnel digital marketing to grow your brand and revenue.",
+//     icon: DigitalMarketing,
+//     points: ["SEO", "Social Media", "Content Marketing", "PPC", "Email"],
+//     routeName: "digital-marketing-solution-services",
+//   },
+//   {
+//     title: "IT Staff Augmentation",
+//     subTitle: "Services",
+//     description:
+//       "Flexible staffing to meet project goals without long-term hiring.",
+//     icon: Staff,
+//     points: [
+//       "Scalable Teams",
+//       "Short-term/Contract",
+//       "Long-Term Engagement",
+//       "Cost-Effective",
+//     ],
+//     routeName: "it-staff-augmentation-services",
+//   },
+// ];
 const data = [
+  // {
+  //   title: "AI-as-a-Service", subTitle: "(AIaaS)", description: "Our AIaaS (Artificial Intelligence as a Service) offerings provide businesses with scalable, ready-to-use AI solutions that can be easily integrated into your existing systems.", icon: APIIcon, bg: "https://res.cloudinary.com/ddg5dxpsl/image/upload/v1751798481/animatecard3_gbldyi.jpg",
+  //   points: ["AI-Agents", "Generative AI (Gen AI)", "AI Consultation", "Machine Learning Model Development", "Natural Language Processing (NLP)", "Computer Vision", "AI-powered solutions as Recommendation Systems, Predictive Analysis, AI-document extraction system", "Data Services, Big Data Analysis, Data Engineering"],
+  //   routeName: "ai-machine-learning-development-services"
+  // },
   {
-    title: "AI/ML Project",
-    subTitle: "Development",
-    description:
-      "Revolutionize your operations with our AI-driven projects and artificial intelligence software solutions.",
-    icon: AIMLIcon,
-    points: [
-      "AI-Agents",
-      "Generative AI (Gen AI)",
-      "AI Consultation",
-      "Machine Learning Model Development",
-      "Natural Language Processing (NLP)",
-      "Computer Vision",
-      "Recommendation Systems",
-      "Predictive Analysis",
-    ],
-    routeName: "ai-machine-learning-development-services",
+    title: "AI/ML Project", subTitle: "Development", description: "Revolutionize your operations with our AI-driven projects and artificial intelligence software solutions.", icon: AIMLIcon, bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887702/AI-ML_development_thypt5.jpg",
+    points: ["AI-Agents", "Generative AI (Gen AI)", "AI Consultation", "Machine Learning Model Development", "Natural Language Processing (NLP)", "Computer Vision", "AI-powered solutions as Recommendation Systems, Predictive Analysis, AI-document extraction system", "Data Services, Big Data Analysis, Data Engineering"],
+    routeName: "ai-machine-learning-development-services"
   },
   {
-    title: "Mobile Application",
-    subTitle: "Development",
-    description:
-      "Custom mobile app development for iOS, Android, and cross-platform solutions.",
-    icon: MobileDev,
-    points: [
-      "iOS App Development",
-      "Android App Development",
-      "Cross-Platform",
-      "Hybrid Apps",
-      "AI-Powered Apps",
-    ],
-    routeName: "mobile-app-development-services",
+    title: "Mobile Application", subTitle: "Development", description: "Transform your business with our custom mobile app development services for iOS, Android, and cross-platform solutions. From sleek iOS apps to robust Android applications, we deliver scalable, secure, and AI-powered mobile apps tailored to your needs.", icon: MobileDev, bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887703/Mobile_Application_Devel_opment_t2btno.jpg",
+    points: ["Custom iOS App Development", "Android App Development", "Cross-Platform App Development", "Hybrid App Development", "AI-Powered Mobile Application Development"],
+    routeName: "mobile-app-development-services"
   },
   {
-    title: "Website",
-    subTitle: "Development",
-    description:
-      "Fast, secure, and scalable websites tailored to your business needs.",
-    icon: WebDevIcon,
-    points: [
-      "Custom Websites",
-      "E-Commerce",
-      "WordPress",
-      "Responsive Design",
-      "SEO-Optimized",
-    ],
-    routeName: "website-development-services",
+    title: "Website ", subTitle: "Development", description: "Elevate your online presence with our professional website development services. we create fast, secure, and scalable websites tailored to your business needs.", icon: WebDevIcon, bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887703/Website_Development_fdczid.jpg",
+    points: ["Custom Website Development", "E-Commerce Website Development", "WordPress Development", "Responsive Web Design", "SEO-Optimized Websites", "Mobile-Optimized Websites", "Web App Development"],
+    routeName: "website-development-services"
   },
   {
-    title: "Custom Software",
-    subTitle: "Development",
-    description:
-      "Enterprise-grade and AI-powered custom software to match your workflow.",
-    icon: CSD,
-    points: [
-      "Tailored Solutions",
-      "Enterprise Software",
-      "AI-Powered Software",
-      "Cross-Platform",
-    ],
-    routeName: "custom-software-development-services",
+    title: "Custom Software", subTitle: "Development", description: "We specialize in custom software development to meet the unique demands of your business. Whether you're looking for enterprise-grade software or cutting-edge AI-powered solutions, we bring your vision to life.", icon: CSD, bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751956237/Custom_Software_Development_qqrsew.jpg",
+    points: ["Tailored Software Solutions", "Enterprise Software Development", "AI-Powered Software Solutions", "Big Data Software Development", "Cross-Platform Software Development", "Industry-Specific Solutions"],
+    routeName: "custom-software-development-services"
   },
   {
-    title: "BlockChain",
-    subTitle: "Development",
-    description:
-      "Secure and scalable blockchain solutions and decentralized applications.",
-    icon: blockChain,
-    points: [
-      "Apps",
-      "Smart Contracts",
-      "Blockchain Integration",
-      "Token Development",
-    ],
-    routeName: "blockchain-solution-development-services",
+    title: "BlockChain", subTitle: "Development", description: "From custom blockchain app development to creating secure and scalable decentralized applications (dApps), we deliver innovative solutions tailored to your needs.", icon: blockChain, bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751957295/Our_services_banner_images_mhn0rc.jpg",
+    points: ["Custom Blockchain Solutions", "Decentralized Applications (dApps)", 'Smart Contract Development', "Blockchain Integration", "Private and Public Blockchain Development", "Cryptocurrency Development", "Blockchain for Supply Chain Management", "Token Development"],
+    routeName: "blockchain-solution-development-services"
+  },
+ 
+  {
+    title: "Digital Marketing", subTitle: "Services", description: "We offer a full suite of digital marketing solutions designed to enhance your brand's visibility and drive targeted traffic. Our expertise encompasses SEO services, social media marketing, content marketing, PPC advertising, and email marketing, ensuring a holistic approach to your online growth.", icon: DigitalMarketing, bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887702/Digital_Marketting_bongzc.jpg",
+    points: ["Search Engine Optimization (SEO)", "Social Media Marketing", "Content Marketing", "Pay-Per-Click (PPC) Advertising", "Email Marketing", "SEM"],
+    routeName: "digital-marketing-solution-services"
   },
   {
-    title: "Digital Marketing",
-    subTitle: "Services",
-    description:
-      "Full-funnel digital marketing to grow your brand and revenue.",
-    icon: DigitalMarketing,
-    points: ["SEO", "Social Media", "Content Marketing", "PPC", "Email"],
-    routeName: "digital-marketing-solution-services",
+    title: "IT Staff Augmentation", subTitle: "Services", description: "We offer flexible IT staff augmentation services to help you meet your project goals without the long-term commitment of hiring full-time employees.", icon: Staff, bg: "https://res.cloudinary.com/dxlkwdlnh/image/upload/v1751887705/Staff-Agumentation_Services_zrds8j.jpg",
+    points: ["Scalable IT Staffing Solutions", "Short-term/Contract Engagement", "Long Term Engagement Model", "Cost-Effective", "Ready to  Deployment"],
+    routeName: "it-staff-augmentation-services"
   },
-  {
-    title: "IT Staff Augmentation",
-    subTitle: "Services",
-    description:
-      "Flexible staffing to meet project goals without long-term hiring.",
-    icon: Staff,
-    points: [
-      "Scalable Teams",
-      "Short-term/Contract",
-      "Long-Term Engagement",
-      "Cost-Effective",
-    ],
-    routeName: "it-staff-augmentation-services",
-  },
-];
-
+]
 function OurServicesComponent() {
   return (
     <div
       style={{
         width: "100%",
-        maxWidth: "1200px",
+        // maxWidth: "1200px",
         margin: "0 auto",
-        padding: "40px 20px",
+        padding: "30px 20px",
       }}
     >
       <h2
@@ -762,12 +804,12 @@ function OurServicesComponent() {
           <div
             key={item.title + index}
             style={{
-              flex: "0 1 calc(33.333% - 20px)", // 3 cards per row
+              flex: "0 1 calc(33.333%)", // 3 cards per row
               minWidth: "280px",
-              maxWidth: "360px",
+              maxWidth: "400px",
               border: "1px solid #007bff",
               borderRadius: "10px",
-              padding: "24px",
+              padding: "12px",
               background: "#fff",
               display: "flex",
               flexDirection: "column",
@@ -831,8 +873,8 @@ function OurServicesComponent() {
               <p
                 className={ubuntu.className}
                 style={{
-                  fontSize: "0.95rem",
-                  fontWeight: "500",
+                  fontSize: "1.25rem",
+                  fontWeight: "400",
                   color: "#555",
                   textAlign: "center",
                   marginBottom: "16px",
